@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+:root {
+    --imagem-lamborghini: url(../imagens/imagem-lamborghini.jpg);
+
+    --icone-lamborghini: url(../imagens/icone-lamborghini-70.webp);
+}
+
+div.imagem-carro {
+    background-image: var(--imagem-lamborghini);
+}
+
+article.lamborghini > h1::before {
+    content: var(--icone-lamborghini);
+}

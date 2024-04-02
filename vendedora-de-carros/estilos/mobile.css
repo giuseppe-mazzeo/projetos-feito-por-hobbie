@@ -23,9 +23,6 @@
     --cor5: #0D0D0D;
 
     --sr-Peppino: url(../imagens/imagem-pepino-160.png);
-    --imagem-lamborghini: url(../imagens/imagem-lamborghini.jpg);
-    --icone-lamborghini: url(../imagens/icone-lamborghini-70.webp);
-
 }
 
 header {
@@ -95,17 +92,17 @@ main {
     margin: auto;
 }
 
-main > article#apresentacao {
-    color: white;
-    background-color: var(--cor1);
-}
-
-main > article > p {
+article > p {
     text-align: justify;
     padding: 15px 15px 35px 15px;
 }
 
-main > div.imagem-carro {
+article#apresentacao {
+    color: white;
+    background-color: var(--cor1);
+}
+
+div.imagem-carro {
     background: var(--cor3) none center no-repeat fixed;
     background-size: 100%;
     padding: 15% 0%;
@@ -117,26 +114,19 @@ main > div.imagem-carro {
     }
 }
 
-main > div#lamborghini {
-    background-image: var(--imagem-lamborghini);
-}
-
-main > article.descricaoCarro {
+article.descricaoCarro {
     position: relative;
     border:5px solid var(--cor1);
-    border-radius: 15px 0;
 }
 
-main > article.descricaoCarro > h1 {
+article.descricaoCarro > h1 {
     font-size: 1.5em;
     text-align: center;
     margin-top: 20px;
 }
 
-main > article.descricaoCarro > h1::before {
+article.descricaoCarro > h1::before {
     position: absolute;
     margin-top: -20px;
     margin-left: -70px;
-    content: var(--icone-lamborghini);
 }
-
