@@ -25,6 +25,10 @@
     --sr-Peppino: url(../imagens/imagem-pepino-160.png);
 }
 
+body {
+    background-color: var(--cor5);
+}
+
 header {
     position: relative;
     background-color: var(--cor2);
@@ -92,20 +96,20 @@ main {
     margin: auto;
 }
 
-article > p {
-    text-align: justify;
-    padding: 15px 15px 35px 15px;
-}
-
 article#apresentacao {
     color: white;
     background-color: var(--cor1);
 }
 
+article > p {
+    text-align: justify;
+    padding: 0 15px 35px 15px;
+}
+
 div.imagem-carro {
-    background: var(--cor3) none center no-repeat fixed;
+    background: var(--cor5) none center no-repeat fixed;
     background-size: 100%;
-    padding: 15% 0%;
+    padding: 23% 0%;
 }
 
 @media screen and (min-width: 850px) {
@@ -120,13 +124,15 @@ article.descricaoCarro {
 }
 
 article.descricaoCarro > h1 {
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-align: center;
-    margin-top: 20px;
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor3));
+    padding-top: 25px;
+    padding-bottom: 45px;
 }
 
 article.descricaoCarro > h1::before {
     position: absolute;
     margin-top: -20px;
-    margin-left: -70px;
+    margin-left: -80px;
 }

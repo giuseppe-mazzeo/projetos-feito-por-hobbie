@@ -1,15 +1,36 @@
 @charset "UTF-8";
 
 :root {
+    /* Lamborghini */
     --imagem-lamborghini: url(../imagens/imagem-lamborghini.jpg);
-
     --icone-lamborghini: url(../imagens/icone-lamborghini-70.webp);
+
+    /* Mercedes */
+    --imagem-mercedes: url(../imagens/imagem-mercedes.jpg);
+    --icone-mercedes: url(../imagens/icone-mercedes-70.png);
+
 }
 
-div.imagem-carro {
+
+/* Lamborghini */
+section#lamborghini div {
     background-image: var(--imagem-lamborghini);
 }
-
-article.lamborghini > h1::before {
+section#lamborghini h1 {
+    padding-left: 10%;
+}
+section#lamborghini h1::before {
     content: var(--icone-lamborghini);
+}
+
+
+/* Mercedes */
+section#mercedes div {
+    background-image: var(--imagem-mercedes);
+}
+section#mercedes h1 {
+    padding-left: 6%;
+}
+section#mercedes h1::before {
+    content: var(--icone-mercedes);
 }
