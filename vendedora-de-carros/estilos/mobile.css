@@ -94,6 +94,7 @@ main {
     max-width: 850px ;
     background-color: var(--cor3);
     margin: auto;
+    margin-bottom: 20px;
 }
 
 article#apresentacao {

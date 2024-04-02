@@ -2,13 +2,16 @@
 
 :root {
     /* Lamborghini */
-    --imagem-lamborghini: url(../imagens/imagem-lamborghini.jpg);
-    --icone-lamborghini: url(../imagens/icone-lamborghini-70.webp);
+    --imagem-lamborghini: url(../imagens/carros/imagem-lamborghini.jpg);
+    --icone-lamborghini: url(../imagens/icones/icone-lamborghini-70.webp);
 
     /* Mercedes */
-    --imagem-mercedes: url(../imagens/imagem-mercedes.jpg);
-    --icone-mercedes: url(../imagens/icone-mercedes-70.png);
+    --imagem-mercedes: url(../imagens/carros/imagem-mercedes.jpg);
+    --icone-mercedes: url(../imagens/icones/icone-mercedes-70.png);
 
+    /* Aston Martin */
+    --imagem-astonMartin: url(../imagens/carros/imagem-aston-martin.jpg);
+    --icone-astonMartin: url(../imagens/icones/icone-aston-martin-novo-4.png);
 }
 
 
@@ -33,4 +36,16 @@ section#mercedes h1 {
 }
 section#mercedes h1::before {
     content: var(--icone-mercedes);
+}
+
+
+/* Aston Martin */
+section#astonMartin div {
+    background-image: var(--imagem-astonMartin);
+}
+section#astonMartin h1 {
+    padding-left: 6%;
+}
+section#astonMartin h1::before {
+    content: var(--icone-astonMartin);
 }
