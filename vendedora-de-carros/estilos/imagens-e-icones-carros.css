@@ -12,6 +12,10 @@
     /* Aston Martin */
     --imagem-astonMartin: url(../imagens/carros/imagem-aston-martin.jpg);
     --icone-astonMartin: url(../imagens/icones/icone-aston-martin-novo-4.png);
+
+    /* McLaren */
+    --imagem-mcLaren: url(../imagens/carros/imagem-mclaren.jpeg);
+    --icone-mcLaren: url(../imagens/icones/icone-mclaren-70.png);
 }
 
 
@@ -48,4 +52,18 @@ section#astonMartin h1 {
 }
 section#astonMartin h1::before {
     content: var(--icone-astonMartin);
+}
+
+
+/* McLaren */
+section#mcLaren div {
+    background-image: var(--imagem-mcLaren);
+}
+section#mcLaren h1 {
+    padding-left: 8%;
+}
+section#mcLaren h1::before {
+    content: var(--icone-mcLaren);
+    margin-top: -8px;
+    margin-left: -125px;
 }

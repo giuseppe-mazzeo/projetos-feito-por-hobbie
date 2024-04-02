@@ -18,12 +18,33 @@
         <p>
             Uma das melhores locadoras com <strong>preços justos</strong> e com os <strong>melhores carros</strong> na garagem, todos esperando para você vir buscá-los!
         </p>
+
+        <menu>
+            <a href="#lamborghini">lam</a>
+            <a href="#mercedes">mer</a>            
+            <a href="#astonMartin">ast</a>
+            <a href="#mcLaren">mc</a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#">Mais Informações</a>
+        </menu>
     </header>
 
     <main>
         <article id="apresentacao">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias neque blanditiis placeat similique maiores eaque, dicta sequi accusamus. Debitis distinctio nesciunt reprehenderit deleniti ut quidem repellendus pariatur nobis quas hic.
+                Bem-vindo(a) à locadora do Sr.Peppino! Fique à vontade para ver os carros que temos disponivéis na nossa concessionária.
+            </p>
+            <p>
+                Pode buscar as marcas dos melhores carros que temos no menu do site.
+            </p>
+            <p>
+                Caso queira visitar nossa loja preencha o formulário e entre em contato conosco.
             </p>
         </article>
 
@@ -55,7 +76,19 @@
             <div class="imagem-carro"></div>
 
             <article class="descricaoCarro">
-                <h1> Mercedes Maybach</h1>
+                <h1> Aston Martin</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur ratione blanditiis quae iste dignissimos enim! A id unde dignissimos natus aliquam vitae? Dolorum, eius recusandae eaque accusantium repellat quos.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque itaque dignissimos quam cumque doloribus placeat aspernatur iste quia voluptatibus laudantium, cupiditate ea commodi et quis in. Expedita quo similique id.
+                </p>
+            </article>
+        </section>
+
+        <section id="mcLaren">
+            <div class="imagem-carro"></div>
+
+            <article class="descricaoCarro">
+                <h1> Mc Laren</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur ratione blanditiis quae iste dignissimos enim! A id unde dignissimos natus aliquam vitae? Dolorum, eius recusandae eaque accusantium repellat quos.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque itaque dignissimos quam cumque doloribus placeat aspernatur iste quia voluptatibus laudantium, cupiditate ea commodi et quis in. Expedita quo similique id.
@@ -63,5 +96,41 @@
             </article>
         </section>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Verifica se há uma âncora na URL
+    if (window.location.hash) {
+        // Remove a âncora da URL sem recarregar a página
+        history.replaceState(null, null, ' ');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Selecione todos os links que começam com "#"
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Adicione um evento de clique a cada link
+        anchor.addEventListener('click', function(e) {
+            // Impedir o comportamento padrão do link
+            e.preventDefault();
+            
+            // Obter o elemento de destino do link
+            const target = document.querySelector(this.getAttribute('href'));
+            
+            // Verificar se o elemento de destino existe
+            if (target) {
+                // Calcular o deslocamento do topo da página até o elemento de destino
+                const offset = target.offsetTop - 160; // Ajuste esse valor conforme necessário
+                
+                // Rolar suavemente para o elemento de destino com um deslocamento
+                window.scrollTo({
+                    top: offset,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+    </script>
 </body>
 </html>
