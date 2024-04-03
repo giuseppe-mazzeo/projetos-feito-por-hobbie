@@ -16,6 +16,14 @@
     /* McLaren */
     --imagem-mcLaren: url(../imagens/carros/imagem-mclaren.jpeg);
     --icone-mcLaren: url(../imagens/icones/icone-mclaren-70.png);
+
+    /* Koenigsegg */
+    --imagem-koenigsegg: url(../imagens/carros/imagem-koenigsegg.jpg);
+    --icone-koenigsegg: url(../imagens/icones/icone-koenigsegg-70.png);
+
+    /* Pagani */
+    --imagem-pagani: url(../imagens/carros/imagem-pagani.jpg);
+    --icone-pagani: url(../imagens/icones/icone-pagani-70.png);
 }
 
 
@@ -66,4 +74,32 @@ section#mcLaren h1::before {
     content: var(--icone-mcLaren);
     margin-top: -8px;
     margin-left: -125px;
+}
+
+
+/* Koenigsegg */
+section#koenigsegg div {
+    background-image: var(--imagem-koenigsegg);
+}
+section#koenigsegg h1 {
+    padding-left: 8%;
+}
+section#koenigsegg h1::before {
+    content: var(--icone-koenigsegg);
+    margin-top: -8px;
+    margin-left: -80px;
+}
+
+
+/* Pagani */
+section#pagani div {
+    background-image: var(--imagem-pagani);
+}
+section#pagani h1 {
+    padding-left: 8%;
+}
+section#pagani h1::before {
+    content: var(--icone-pagani);
+    margin-top: -8px;
+    margin-left: -80px;
 }
