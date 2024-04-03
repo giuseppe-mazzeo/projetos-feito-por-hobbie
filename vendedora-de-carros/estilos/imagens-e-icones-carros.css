@@ -24,6 +24,14 @@
     /* Pagani */
     --imagem-pagani: url(../imagens/carros/imagem-pagani.jpg);
     --icone-pagani: url(../imagens/icones/icone-pagani-70.png);
+
+    /* Bugatti */
+    --imagem-bugatti: url(../imagens/carros/imagem-bugatti.jpg);
+    --icone-bugatti: url(../imagens/icones/icone-bugatti-70.png);
+
+    /* Ferrari */
+    --imagem-ferrari: url(../imagens/carros/imagem-ferrari.jpg);
+    --icone-ferrari: url(../imagens/icones/icone-ferrari-70.png);
 }
 
 
@@ -100,6 +108,34 @@ section#pagani h1 {
 }
 section#pagani h1::before {
     content: var(--icone-pagani);
+    margin-top: -8px;
+    margin-left: -80px;
+}
+
+
+/* Bugatti */
+section#bugatti div {
+    background-image: var(--imagem-bugatti);
+}
+section#bugatti h1 {
+    padding-left: 8%;
+}
+section#bugatti h1::before {
+    content: var(--icone-bugatti);
+    margin-top: -8px;
+    margin-left: -80px;
+}
+
+
+/* Ferrari */
+section#ferrari div {
+    background-image: var(--imagem-ferrari);
+}
+section#ferrari h1 {
+    padding-left: 8%;
+}
+section#ferrari h1::before {
+    content: var(--icone-ferrari);
     margin-top: -8px;
     margin-left: -80px;
 }
