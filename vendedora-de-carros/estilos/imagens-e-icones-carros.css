@@ -32,6 +32,14 @@
     /* Ferrari */
     --imagem-ferrari: url(../imagens/carros/imagem-ferrari.jpg);
     --icone-ferrari: url(../imagens/icones/icone-ferrari-70.png);
+
+    /* Bentley */
+    --imagem-bentley: url(../imagens/carros/imagem-bentley.jpg);
+    --icone-bentley: url(../imagens/icones/icone-bentley-70.webp);
+
+    /* Rolls-Royce */
+    --imagem-rollsRoyce: url(../imagens/carros/imagem-rolls-royce.jpg);
+    --icone-rollsRoyce: url(../imagens/icones/icone-rolls-royce-70.webp);
 }
 
 
@@ -136,6 +144,34 @@ section#ferrari h1 {
 }
 section#ferrari h1::before {
     content: var(--icone-ferrari);
+    margin-top: -8px;
+    margin-left: -80px;
+}
+
+
+/* Bentley */
+section#bentley div {
+    background-image: var(--imagem-bentley);
+}
+section#bentley h1 {
+    padding-left: 8%;
+}
+section#bentley h1::before {
+    content: var(--icone-bentley);
+    margin-top: -8px;
+    margin-left: -80px;
+}
+
+
+/* Rolls-Royce */
+section#rollsRoyce div {
+    background-image: var(--imagem-rollsRoyce);
+}
+section#rollsRoyce h1 {
+    padding-left: 8%;
+}
+section#rollsRoyce h1::before {
+    content: var(--icone-rollsRoyce);
     margin-top: -8px;
     margin-left: -80px;
 }
