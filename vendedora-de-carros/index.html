@@ -6,10 +6,12 @@
     <title>Locadora Pepino</title>
     <link rel="shortcut icon" href="imagens/favicon-carro.png" type="image/x-icon">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="estilos/imagens-e-icones-carros.css">
     <link rel="stylesheet" href="estilos/mobile.css" media="all">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <script src="script.js"></script>
     <header>
         <h1>Locadora do Sr. Peppino</h1>
@@ -20,7 +22,8 @@
             Uma das melhores locadoras com <strong>preços justos</strong> e com os <strong>melhores carros</strong> na garagem, todos esperando para você vir buscá-los!
         </p>
 
-        <menu>
+        <span id="burger" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="itens">
             <a href="#lamborghini">lam</a>
             <a href="#mercedes">mer</a>            
             <a href="#astonMartin">ast</a>
@@ -41,10 +44,10 @@
                 Bem-vindo(a) à locadora do Sr.Peppino! Fique à vontade para ver os carros que temos disponivéis na nossa concessionária.
             </p>
             <p>
-                Pode buscar as marcas dos melhores carros que temos no menu do site.
+                Pode dar uma olhada nas melhores marcas de carros que temos acessando o menu do site.
             </p>
             <p>
-                Caso queira visitar nossa loja preencha o formulário e entre em contato conosco.
+                Caso queira visitar nossa loja, acesse a secção <strong>"Mais Informações"</strong>
             </p>
         </article>
 
