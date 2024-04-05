@@ -102,7 +102,7 @@ header > p > strong {
     }
 }
 
-menu > a, span {
+menu > a, span#burger {
     display: block;
     width: 100%;
     color: white;
@@ -120,11 +120,15 @@ menu > a:hover {
     background-color: var(--cor3);
 }
 
-span {
+abbr {
+    text-decoration: none;
+}
+
+span#burger {
     background-color: var(--cor4);
 }
 
-span:active {
+span:active#burger {
     color: var(--cor4);
     background-color: var(--cor3);
 }
@@ -133,16 +137,20 @@ main {
     max-width: 850px ;
     background-color: var(--cor3);
     margin: auto;
-    margin-bottom: 20px;
+}
+
+article#apresentacao {
+    background-color: var(--cor3);
+    padding: 20px 0 40px;
 }
 
 article#apresentacao > p {
     font-size: 1.05em;
-    color: white;
-    background-color: var(--cor1);
+    font-weight: 300;
+    color: black;
     text-indent: 20px;
     text-align: justify;
-    padding: 20px 20px;
+    padding: 15px;
 }
 
 article#apresentacao strong {
@@ -196,3 +204,33 @@ section#bugatti { display: none; }
 section#ferrari { display: none; }
 section#bentley { display: none; }
 section#rollsRoyce { display: none; }
+
+footer {
+    font-size: 0.9em;
+    color: white;
+    background-color: black;
+}
+
+footer > div {
+    padding: 10px;
+}
+
+div#esquerda {
+    float: left;
+    width: 60%;
+}
+
+span#nome, div#direita a {
+    font-weight: bold;
+    font-style: italic;
+}
+
+div#direita {
+    float: right;
+    width: 40%;
+}
+
+div#direita a {
+    color: var(--cor3);
+    text-decoration: none;
+}
