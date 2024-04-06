@@ -6,39 +6,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Obtém uma referência para a caixa de menu
-var itens = document.getElementById('itens');
+    var itens = document.getElementById('itens');
 
-// Verifica se há um estado salvo no armazenamento local
-var menuState = localStorage.getItem('menuState');
+    // Verifica se há um estado salvo no armazenamento local
+    var menuState = localStorage.getItem('menuState');
 
-// Se houver um estado salvo, aplica-o ao menu
-if (menuState) {
-    itens.style.display = menuState;
-}
-
-function clickMenu() {
-    if (itens.style.display == 'block') {
-        itens.style.display = 'none';
-        // Salva o estado do menu no armazenamento local
-        localStorage.setItem('menuState', 'none');
-    } else {
-        itens.style.display = 'block';
-        // Salva o estado do menu no armazenamento local
-        localStorage.setItem('menuState', 'block');
+    // Se houver um estado salvo, aplica-o ao menu
+    if (menuState) {
+        itens.style.display = menuState;
     }
-}
 
-// Adiciona um evento de clique ao span
-document.getElementById('burger').addEventListener('click', clickMenu);
+    function clickMenu() {
+        if (itens.style.display == 'block') {
+            itens.style.display = 'none';
+            // Salva o estado do menu no armazenamento local
+            localStorage.setItem('menuState', 'none');
+        } else {
+            itens.style.display = 'block';
+            // Salva o estado do menu no armazenamento local
+            localStorage.setItem('menuState', 'block');
+        }
+    }
 
-function mudouTamanho() {
-    if (window.innerWidth >= 768) {
+    // Adiciona um evento de clique ao span
+    document.getElementById('burger').addEventListener('click', clickMenu);
+
+    function mudouTamanho() {
+        if (window.innerWidth >= 768) {
         itens.style.display = 'block'
-    } else {
-        itens.style.display = 'none'
+        } else {
+            itens.style.display = 'none'
+        }
     }
-}
-
 });
 
 document.addEventListener('DOMContentLoaded', function() {

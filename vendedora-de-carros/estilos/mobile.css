@@ -102,7 +102,11 @@ header > p > strong {
     }
 }
 
-menu > a, span#burger {
+abbr {
+    text-decoration: none;
+}
+
+menu a, span#burger {
     display: block;
     width: 100%;
     color: white;
@@ -114,14 +118,11 @@ menu > a, span#burger {
     border-bottom: 1px;
 }
 
-menu > a:hover {
+menu a:hover {
     font-weight: bold;
     color: var(--cor4);
     background-color: var(--cor3);
-}
-
-abbr {
-    text-decoration: none;
+    border-color: var(--cor3);
 }
 
 span#burger {
@@ -131,6 +132,10 @@ span#burger {
 span:active#burger {
     color: var(--cor4);
     background-color: var(--cor3);
+}
+
+span:hover {
+    cursor: pointer;
 }
 
 main {
