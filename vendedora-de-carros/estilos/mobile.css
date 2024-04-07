@@ -30,6 +30,11 @@
     --sr-Peppino: url(../imagens/imagem-pepino-160.png);
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -83,25 +88,6 @@ header > p > strong {
     text-shadow: 1px 1px 3px var(--cor4);
 }
 
-@media screen and (min-width: 810px) {
-    header > div#srPeppino > img {
-        display: none;
-    }
-
-    header > h1::after {
-        position: absolute;
-        content: var(--sr-Peppino);
-        top: 3%;
-        animation: aparecer 3s ease forwards;
-        padding-left: 5px;
-    }   
-
-    header > div#srPeppino {
-        transition: 3s;
-        height: 0;
-    }
-}
-
 abbr {
     text-decoration: none;
 }
@@ -139,7 +125,7 @@ span:hover {
 }
 
 main {
-    max-width: 850px ;
+    max-width: 991.98px;
     background-color: var(--cor3);
     margin: auto;
 }
@@ -166,12 +152,6 @@ div.imagem-carro {
     background: var(--cor5) none center no-repeat fixed;
     background-size: 100%;
     padding: 23% 0%;
-}
-
-@media screen and (min-width: 850px) {
-    main div.imagem-carro {
-        background-size: auto;
-    }
 }
 
 article.descricaoCarro {

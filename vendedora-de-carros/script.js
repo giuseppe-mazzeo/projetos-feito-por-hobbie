@@ -32,10 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('burger').addEventListener('click', clickMenu);
 
     function mudouTamanho() {
-        if (window.innerWidth >= 768) {
-        itens.style.display = 'block'
+        if (window.innerWidth >= 991.98) {
+            itens.style.display = 'block'
+            localStorage.setItem('menuState', 'block');
         } else {
             itens.style.display = 'none'
+            localStorage.setItem('menuState', 'none');
         }
     }
 });
