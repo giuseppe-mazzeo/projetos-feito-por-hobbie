@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    span#burger {
+        display: none;
+    }
+
+    menu > abbr {
+        display: inline-block;
+    }
+
+    menu a {
+        padding: 3px 8px 3px 8px;
+        border: 2px solid var(--cor4);
+        border-bottom: 1px;
+        border-radius: 5px 5px 0 0;
+    }
+
+}
