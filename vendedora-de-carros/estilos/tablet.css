@@ -1,5 +1,23 @@
 @charset "UTF-8";
 
+@keyframes aparecerMenu {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 100px;
+    }
+}
+
+@keyframes desaparecerMenu {
+    from {
+        left: 100px;
+    }
+    to {
+        left: -100%;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
     header {
         padding-bottom: 10px;
@@ -35,21 +53,36 @@
     }
 
     span#burger {
+        position: relative;
         width: 79px;
         font-size: 2.1em;
         border: 2px solid var(--cor3);
         border-radius: 50%;
         padding: 20px;
-        margin-left: 10px;
+        margin: 20px 0 10px 10px;
     }
 
     span#burger:active {
-        border:  solid var(--cor1);
+        border-color: var(--cor1);
+    }
+
+    menu {
+        position: absolute;
+        top: 288px;
+        left: -100%;
+        width: 80%;
+        font-size: 0;
+        animation: aparecerMenu 2s ease forwards;
+    }
+
+    menu#itens.closed {
+        animation: desaparecerMenu 0.5s ease forwards;
     }
 
     menu a {
         display: inline-block;
-        width: 19%;
+        font-size: 16px;
+        width: 20%;
         border-bottom: 2px solid var(--cor4);
     }
 
@@ -58,6 +91,19 @@
         color: var(--cor4);
         background-color: var(--cor3);
         border-color: var(--cor4);
+    }
+
+    a#posicaoSupEsq {
+        border-radius: 20px 0 0 0;
+    }
+
+    a#posicaoSupDir {
+        border-radius: 0 20px 0 0;
+    }
+
+    a#informacoes {
+        width: 100%;
+        border-radius: 0 0 20px 20px;
     }
 
     section#lamborghini { display: block;}
