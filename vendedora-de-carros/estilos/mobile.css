@@ -67,11 +67,11 @@ header > div#srPeppino {
 
 header > div#srPeppino > img {
     position: absolute;
-    transform: translate(-50%, -50%);
     top: 230px;
     left: 50%;
     animation: aparecer 3s ease forwards;
     opacity: 0;
+    transform: translate(-50%, -50%);
 }
 
 header > p {

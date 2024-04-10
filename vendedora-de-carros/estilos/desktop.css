@@ -1,19 +1,31 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    header > div#srPeppino > img {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        animation: aparecer 3s ease forwards;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+
     span#burger {
         display: none;
     }
 
-    menu > abbr {
-        display: inline-block;
-    }
-
     menu a {
+        display: inline-block;
+        width: 86.5px;
         padding: 3px 8px 3px 8px;
         border: 2px solid var(--cor4);
         border-bottom: 1px;
-        border-radius: 5px 5px 0 0;
+        border-radius: 5px 5px 0 0;   
     }
 
+    menu a:hover {
+        color: var(--cor4);
+        background-color: var(--cor3);
+        border-color: var(--cor4);
+    }
 }

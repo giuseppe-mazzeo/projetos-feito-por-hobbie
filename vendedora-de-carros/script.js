@@ -48,16 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Adiciona um evento de clique ao span
     document.getElementById('burger').addEventListener('click', clickMenu);
-
-    function mudouTamanho() {
-        if (window.innerWidth >= 991.98) {
-            itens.style.display = 'block'
-            localStorage.setItem('menuState', 'block');
-        } else {
-            itens.style.display = 'none'
-            localStorage.setItem('menuState', 'none');
-        }
-    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -85,3 +75,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function mudouTamanho() {
+    if (window.innerWidth >= 992 && window.innerWidth <= 1199.98) {
+        itens.style.display = 'block'
+        localStorage.setItem('menuState', 'block');
+    } else {
+        itens.style.display = 'none'
+        localStorage.setItem('menuState', 'none');
+    }
+}
