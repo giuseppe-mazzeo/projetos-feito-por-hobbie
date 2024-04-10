@@ -17,18 +17,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function clickMenu() {
-        var menu = document.getElementById('itens');
-        if (menu.classList.contains('open')) {
-            menu.classList.remove('open');
-            menu.classList.add('closed');
-            // Salva o estado do menu no armazenamento local
-            localStorage.setItem('menuState', 'closed');
+        if (window.innerWidth >= 768 && window.innerWidth <= 991.98) {
+            var menu = document.getElementById('itens');
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                menu.classList.add('closed');
+                itens.style.display = 'none';
+                // Salva o estado do menu no armazenamento local
+                localStorage.setItem('menuState', 'none');
+            } else {
+                menu.classList.remove('closed');
+                menu.classList.add('open');
+                // Salva o estado do menu no armazenamento local
+                itens.style.display = 'block';
+                // Salva o estado do menu no armazenamento local
+                localStorage.setItem('menuState', 'block');
+            }
         } else {
-            menu.classList.remove('closed');
-            menu.classList.add('open');
-            // Salva o estado do menu no armazenamento local
-            localStorage.setItem('menuState', 'open');
-        }
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none';
+                // Salva o estado do menu no armazenamento local
+                localStorage.setItem('menuState', 'none');
+            } else {
+                itens.style.display = 'block';
+                // Salva o estado do menu no armazenamento local
+                localStorage.setItem('menuState', 'block');
+            }
+        } 
     }
 
     // Adiciona um evento de clique ao span
