@@ -44,6 +44,9 @@
 
 
 /* Lamborghini */
+a#linkLamborghini {
+    background-image: var(--icone-lamborghini);
+}
 section#lamborghini div {
     background-image: var(--imagem-lamborghini);
 }
@@ -56,6 +59,9 @@ section#lamborghini h1::before {
 
 
 /* Mercedes */
+a#linkMercedes {
+    background-image: var(--icone-mercedes);
+}
 section#mercedes div {
     background-image: var(--imagem-mercedes);
 }
@@ -68,6 +74,9 @@ section#mercedes h1::before {
 
 
 /* Aston Martin */
+a#linkAstonMartin {
+    background-image: var(--icone-astonMartin);
+}
 section#astonMartin div {
     background-image: var(--imagem-astonMartin);
 }
@@ -80,6 +89,9 @@ section#astonMartin h1::before {
 
 
 /* McLaren */
+a#linkMcLaren {
+    background-image: var(--icone-mcLaren);
+}
 section#mcLaren div {
     background-image: var(--imagem-mcLaren);
 }
@@ -94,6 +106,9 @@ section#mcLaren h1::before {
 
 
 /* Koenigsegg */
+a#linkKoenigsegg {
+    background-image: var(--icone-koenigsegg);
+}
 section#koenigsegg div {
     background-image: var(--imagem-koenigsegg);
 }
@@ -108,6 +123,9 @@ section#koenigsegg h1::before {
 
 
 /* Pagani */
+a#linkPagani {
+    background-image: var(--icone-pagani);
+}
 section#pagani div {
     background-image: var(--imagem-pagani);
 }
@@ -122,6 +140,9 @@ section#pagani h1::before {
 
 
 /* Bugatti */
+a#linkBugatti {
+    background-image: var(--icone-bugatti);
+}
 section#bugatti div {
     background-image: var(--imagem-bugatti);
 }
@@ -136,6 +157,9 @@ section#bugatti h1::before {
 
 
 /* Ferrari */
+a#linkFerrari {
+    background-image: var(--icone-ferrari);
+}
 section#ferrari div {
     background-image: var(--imagem-ferrari);
 }
@@ -150,6 +174,9 @@ section#ferrari h1::before {
 
 
 /* Bentley */
+a#linkBentley {
+    background-image: var(--icone-bentley);
+}
 section#bentley div {
     background-image: var(--imagem-bentley);
 }
@@ -164,6 +191,9 @@ section#bentley h1::before {
 
 
 /* Rolls-Royce */
+a#linkRollsRoyce {
+    background-image: var(--icone-rollsRoyce);
+}
 section#rollsRoyce div {
     background-image: var(--imagem-rollsRoyce);
 }

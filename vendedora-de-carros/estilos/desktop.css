@@ -10,11 +10,15 @@
         transform: translate(-50%, -50%);
     }
 
-    span#burger {
+    menu {
         display: none;
     }
 
-    menu a {
+    span#burger { display: none; }
+
+    div#menu-icones-carros { display: block; }
+
+    div#menu-icones-carros a {
         display: inline-block;
         width: 86px;
         padding: 3px 8px 3px 8px;
@@ -23,11 +27,13 @@
         border-radius: 5px 5px 0 0;   
     }
 
-    menu a:hover {
+    div#menu-icones-carros a:hover {
         color: var(--cor4);
         background-color: var(--cor3);
         border-color: var(--cor4);
     }
+
+    
 
     section#lamborghini { display: block;}
 }

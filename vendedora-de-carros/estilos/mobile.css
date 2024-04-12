@@ -126,6 +126,8 @@ span:hover {
     cursor: pointer;
 }
 
+div#menu-icones-carros { display: none; }
+
 main {
     max-width: var(--largura-max);
     background-color: var(--cor3);
@@ -208,9 +210,9 @@ div#esquerda {
     width: 60%;
 }
 
-span#nome, div#direita a {
+span#nome {
     font-weight: bold;
-    font-style: italic;
+
 }
 
 div#direita {
@@ -221,4 +223,6 @@ div#direita {
 div#direita a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
 }
