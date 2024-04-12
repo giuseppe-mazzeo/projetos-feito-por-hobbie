@@ -16,7 +16,7 @@
 
     menu a {
         display: inline-block;
-        width: 86.5px;
+        width: 86px;
         padding: 3px 8px 3px 8px;
         border: 2px solid var(--cor4);
         border-bottom: 1px;
@@ -28,4 +28,6 @@
         background-color: var(--cor3);
         border-color: var(--cor4);
     }
+
+    section#lamborghini { display: block;}
 }

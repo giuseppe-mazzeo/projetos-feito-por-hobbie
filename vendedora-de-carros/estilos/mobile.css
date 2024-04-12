@@ -28,6 +28,8 @@
     --cor5: #0D0D0D;
 
     --sr-Peppino: url(../imagens/imagem-pepino-160.png);
+
+    --largura-max: 991.98px;
 }
 
 ::-webkit-scrollbar {
@@ -125,7 +127,7 @@ span:hover {
 }
 
 main {
-    max-width: 991.98px;
+    max-width: var(--largura-max);
     background-color: var(--cor3);
     margin: auto;
 }
@@ -191,13 +193,14 @@ section#bentley { display: none; }
 section#rollsRoyce { display: none; }
 
 footer {
+    width: var(--largura-max);
     font-size: 0.9em;
     color: white;
     background-color: black;
-}
-
-footer > div {
-    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    border: 1px solid var(--cor3);
+    padding: 20px;
+    margin: auto;
 }
 
 div#esquerda {
@@ -216,6 +219,6 @@ div#direita {
 }
 
 div#direita a {
-    color: var(--cor3);
+    color: white;
     text-decoration: none;
 }
