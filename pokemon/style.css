@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+
+main {
+    max-width: 500px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+
+
+.container_pokemon {
+    position: relative;
+    height: 300px;
+}
+
+.pokemon_adversario {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+.pokemon_adversario > div {
+    width: 170px;
+    margin-left: -50px;
+    padding: 10px;
+    background-color: gray;
+}
+
+.nome_pokemon_adversario {
+    text-transform: capitalize;
+}
+
+.barra_vida_pokemon_adversario {
+    position: relative;
+    z-index: 2;
+    width: 132px;
+    height: 7px;
+    border-radius: 5px;
+    background-color: green;
+    margin-left: 20px;
+}
+
+.barra_vida_pokemon_adversario ~ div {
+    width: 131.3px;
+    height: 7px;
+    border-radius: 5px;
+    background-color: black;
+    margin-top: -7px;
+    margin-left: 20.7px;
+}
+
+.barra_vida_pokemon_adversario ~ div::before {
+    content: 'HP';
+    position: absolute;
+    top: 22.5px;
+    left: -45px;
+}
+
+.pokemon_adversario > img {
+    width: auto;
+    height: auto;
+    max-height: 110px;
+}
+
+/*
+Pokemon do jogador
+*/
+
+.pokemon_jogador {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+}
+
+.pokemon_jogador > div {
+    width: 170px;
+    margin-left: -50px;
+    padding: 10px;
+    background-color: gray;
+}
+
+.nome_pokemon_jogador {
+    text-transform: capitalize;
+}
+
+.barra_vida_pokemon_jogador {
+    position: relative;
+    z-index: 2;
+    width: 132px;
+    height: 7px;
+    border-radius: 5px;
+    background-color: green;
+    margin-left: 20px;
+}
+
+.barra_vida_pokemon_jogador + div {
+    width: 131.3px;
+    height: 7px;
+    border-radius: 5px;
+    background-color: black;
+    margin-top: -7px;
+    margin-left: 20.7px;
+}
+
+.barra_vida_pokemon_jogador + div::before {
+    content: 'HP';
+    position: absolute;
+    top: 22.5px;
+    left: -45px;
+}
+
+.pokemon_jogador > img {
+    width: auto;
+    height: auto;
+    max-height: 160px;
+}
+
+.motrar_quantidade_vida_pokemon_jogador {
+    text-align: center;
+}
+
+
+
+
+.mostrador_balls_equipe_jogador {
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 10px;
+    width: 130px;
+    background-color: gray;
+}
+
+.pokemon1_ball_jogador,
+.pokemon2_ball_jogador,
+.pokemon3_ball_jogador,
+.pokemon4_ball_jogador,
+.pokemon5_ball_jogador,
+.pokemon6_ball_jogador {
+    text-align: center;
+}
+
+
+
+
+.container_acoes {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 250px;
+    background-color: orange;
+}
+
+.container_acoes > div:first-child {
+    margin: 0 40%;
+}
+
+.botao_lutar,
+.botao_bolsa,
+.botao_fugir,
+.botao_pokemons {
+    width: 100px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.caixa_lutar,
+.caixa_bolsa,
+.caixa_pokemons {
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 480px;
+    height: 230px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.caixa_lutar {
+    display: none;
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 10px;
+}
+
+.caixa_lutar > button {
+    width: calc(50% - 20px);
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.caixa_bolsa {
+    flex-direction: column;
+}
+
+.caixa_pokemons {
+    display: none;
+    flex-wrap: wrap;
+}
+
+.caixa_pokemons > button {
+    width: calc(50% - 20px);
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.botao_voltar {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+}
+
+
+
+
+.caixa_pokemons .barra_vida_pokemon_jogador + div::before {
+    content: '';
+}
