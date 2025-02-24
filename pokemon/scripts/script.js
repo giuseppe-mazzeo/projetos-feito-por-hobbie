@@ -49,6 +49,8 @@ function aleatorizarSexoPokemon() {
 
 function ajustarTamanhoPokemon(alturaPokemon, jogador) {
     if (jogador) {
+    console.log(alturaPokemon)
+
         imagemPokemonJogador.onload = () => {
             imagemPokemonJogador.style.height = `${imagemPokemonJogador.naturalHeight*2.47 + alturaPokemon}px`;
         };
@@ -56,7 +58,7 @@ function ajustarTamanhoPokemon(alturaPokemon, jogador) {
     }
 
     imagemPokemonAdversario.onload = () => {
-        imagemPokemonAdversario.style.height = `${imagemPokemonAdversario.naturalHeight + alturaPokemon}px`;
+        imagemPokemonAdversario.style.height = `${imagemPokemonAdversario.naturalHeight + alturaPokemon + 20}px`;
     }
 }
 
@@ -139,7 +141,7 @@ function entrarEmCombate(pokemonAtual, jogador) {
     vidaAtualPokemonAdversario.textContent = equipeAdversario[pokemonAtual].hpAtual;
     imagemPokemonAdversario.src = equipeAdversario[pokemonAtual].img;
     
-    ajustarTamanhoPokemon(pokemonAtual.altura, false);
+    ajustarTamanhoPokemon(equipeAdversario[0].altura, false);
 }
 
 document.getElementById('bulbasaur').addEventListener('click', async () => {
@@ -149,6 +151,9 @@ document.getElementById('bulbasaur').addEventListener('click', async () => {
     await renderizarPokemon(pokemonAleatorio(), null, equipeAdversario[0]);
     entrarEmCombate(0, false);
 });
+
+renderizarPokemon('1', equipeJogador[0], null).then(() =>entrarEmCombate(pokemonEmCombateAtual, true));
+renderizarPokemon('1', null, equipeAdversario[0]).then(() =>entrarEmCombate(0, false));
 
 
 
@@ -338,10 +343,6 @@ const botaoUsarPokeball = document.querySelector('.pokeball');
 const botaoUsarGreatball = document.querySelector('.greatball');
 const botaoUsarUltraball = document.querySelector('.ultraball');
 
-const botaoComprarPokeballs = document.querySelector('.botao_comprar_pokeball');
-const botaoComprarGreatballs = document.querySelector('.botao_comprar_greatball');
-const botaoComprarUltraballs = document.querySelector('.botao_comprar_ultraball');
-
 
 
 function mostradorPokemonEquipe(tipoBall, pokemonAtual) {
@@ -400,6 +401,10 @@ async function capturarPokemon(tipoBall, quantidadeBall) {
     entrarEmCombate(0, false);
 }
 
+/*
+const botaoComprarPokeballs = document.querySelector('.botao_comprar_pokeball');
+const botaoComprarGreatballs = document.querySelector('.botao_comprar_greatball');
+const botaoComprarUltraballs = document.querySelector('.botao_comprar_ultraball');
 
 botaoUsarPokeball.addEventListener('click', () => {
     capturarPokemon('pokeball', bolsaJogador[1].quantidade);
@@ -413,7 +418,6 @@ botaoUsarGreatball.addEventListener('click', () => {
 botaoUsarUltraball.addEventListener('click', () => {
     capturarPokemon('ultraball', bolsaJogador[3].quantidade);
     numUltraballJogador.textContent = bolsaJogador[3].quantidade;
-
 });
 
 botaoComprarPokeballs.addEventListener('click', () => {
@@ -440,3 +444,4 @@ botaoComprarUltraballs.addEventListener('click', () => {
         numUltraballJogador.textContent++;
     }
 });
+*/
