@@ -49,8 +49,6 @@ function aleatorizarSexoPokemon() {
 
 function ajustarTamanhoPokemon(alturaPokemon, jogador) {
     if (jogador) {
-    console.log(alturaPokemon)
-
         imagemPokemonJogador.onload = () => {
             imagemPokemonJogador.style.height = `${imagemPokemonJogador.naturalHeight*2.47 + alturaPokemon}px`;
         };

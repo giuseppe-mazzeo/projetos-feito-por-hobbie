@@ -43,19 +43,21 @@ main {
 .pokemon_adversario {
     position: absolute;
     top: 50px;
-    right: 40px;
-    width: 185px;
+    left: 40px;
+    width: 210px;
 }
 
-.pokemon_adversario > div {
+.pokemon_adversario > div:first-child {
     width: 100%;
-    padding: 10px;
-    border-radius: 30px;
-    background-color: gray;
+    padding: 5px 10px;
+    border: 3px solid black;
+    border-radius: 10px 0;
+    background-color: rgb(255, 243, 188);
 }
 
 .nome_pokemon_adversario {
-    text-transform: capitalize;
+    font-size: 1em;
+    text-transform: uppercase;
 }
 
 .barra_vida_pokemon_adversario {
@@ -79,12 +81,25 @@ main {
 
 .imagem_pokemon_adversario {
     position: absolute;
+    z-index: 1;
     top: 50px;
-    right: 40%;
+    right: -110px;
     width: auto;
     height: auto;
     max-height: 110px;
     transform: translateX(50%);
+}
+
+.campo-batalha {
+    position: relative;
+    top: 10px;
+    right: -240px;
+    width: 160px;
+    height: 120px;
+    border: 5px solid burlywood;
+    border-radius: 90px;
+    background-color: green;
+    transform: perspective(1000px) rotateX(50deg);
 }
 
 /*
