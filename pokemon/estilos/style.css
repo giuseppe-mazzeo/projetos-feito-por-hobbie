@@ -55,12 +55,12 @@ main {
     background-color: rgb(255, 243, 188);
 }
 
-.nome_pokemon_adversario {
+.pokemon_adversario .nome {
     font-size: 1em;
     text-transform: uppercase;
 }
 
-.barra_vida_pokemon_adversario {
+.pokemon_adversario .barra_vida {
     position: relative;
     z-index: 2;
     width: 132px;
@@ -70,7 +70,7 @@ main {
     margin-left: 20px;
 }
 
-.barra_vida_pokemon_adversario ~ div {
+.pokemon_adversario .barra_vida ~ div {
     width: 131.3px;
     height: 7px;
     border-radius: 5px;
@@ -79,7 +79,7 @@ main {
     margin-left: 20.7px;
 }
 
-.imagem_pokemon_adversario {
+.pokemon_adversario .imagem {
     position: absolute;
     z-index: 1;
     top: 50px;
@@ -119,11 +119,12 @@ Pokemon do jogador
     background-color: gray;
 }
 
-.nome_pokemon_jogador {
+.pokemon_jogador .nome {
     text-transform: capitalize;
 }
 
-.barra_vida_pokemon_jogador {
+.pokemon_jogador .barra_vida,
+.pokemon_bolsa .barra_vida {
     position: relative;
     z-index: 2;
     width: 132px;
@@ -133,7 +134,8 @@ Pokemon do jogador
     margin-left: 20px;
 }
 
-.barra_vida_pokemon_jogador + div {
+.pokemon_jogador .barra_vida + div,
+.pokemon_bolsa .barra_vida + div {
     width: 131.3px;
     height: 7px;
     border-radius: 5px;
@@ -142,27 +144,28 @@ Pokemon do jogador
     margin-left: 20.7px;
 }
 
-.barra_vida_pokemon_jogador + div::before {
+.pokemon_jogador .barra_vida + div::before,
+.pokemon_bolsa .barra_vida + div::before {
     content: 'HP';
     position: absolute;
     top: 22.5px;
     left: -45px;
 }
 
-.pokemon_jogador > img {
+.pokemon_jogador .imagem {
     width: auto;
     height: auto;
     max-height: 160px;
 }
 
-.motrar_quantidade_vida_pokemon_jogador {
+.pokemon_jogador .motrar_quantidade_vida {
     text-align: center;
 }
 
 
 
 
-.mostrador_balls_equipe_jogador {
+.mostrador_balls_equipe {
     position: absolute;
     top: 80px;
     display: flex;
@@ -170,15 +173,11 @@ Pokemon do jogador
     justify-content: space-evenly;
     column-gap: 10px;
     width: 130px;
+    height: 20px;
     background-color: gray;
 }
 
-.pokemon1_ball_jogador,
-.pokemon2_ball_jogador,
-.pokemon3_ball_jogador,
-.pokemon4_ball_jogador,
-.pokemon5_ball_jogador,
-.pokemon6_ball_jogador {
+.mostrador_balls_equipe div {
     text-align: center;
 }
 
@@ -257,11 +256,4 @@ Pokemon do jogador
     right: 20px;
     bottom: 20px;
     display: none;
-}
-
-
-
-
-.caixa_pokemons .barra_vida_pokemon_jogador + div::before {
-    content: '';
 }
